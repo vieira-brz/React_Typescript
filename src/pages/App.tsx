@@ -2,6 +2,7 @@ import React from 'react';
 import Form from '../components/Form';
 import List from '../components/List';
 import style from './App.module.scss';
+import Cronometro from '../components/Cronometro';
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       
       <Form />
       <List />
+      <Cronometro />
 
     </div>
   );
