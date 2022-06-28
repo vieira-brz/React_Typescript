@@ -1,24 +1,9 @@
-import React from 'react';
+import { ITarefa } from '../../types/tarefa';
 import Item from './Item';
 import style from './List.module.scss';
 
-function List() {
 
-    // Array
-    const tarefas = [
-        {
-            tarefa: 'React',
-            tempo: '02:00:00'
-        },
-        {
-            tarefa: 'Typescript',
-            tempo: '01:00:00'
-        },
-        {
-            tarefa: 'JavaScript',
-            tempo: '00:30:00'
-        }
-    ]
+function List({tarefas}: {tarefas: ITarefa[]}) {
     
     // Varrendo array
     return (
@@ -26,12 +11,9 @@ function List() {
             <h2>Estudos do dia</h2>
             <ul>
                 {
-                tarefas.map((item, index) => (
-                   <Item 
-                     key={ index }
-                     { ...item }
-                   />                  
-                ))
+                    tarefas.map((item, index) => (
+                        <Item key={ index }  { ...item } />                  
+                    ))
                 }
             </ul>
         </aside>
